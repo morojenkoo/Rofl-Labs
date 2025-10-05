@@ -117,5 +117,5 @@ $f_3$: сумма позиций b
 5. $ccc \rightarrow aaa$
 6. $aaab \rightarrow baaa$
 7. $aaac \rightarrow caaa$
-8. $ccaaa$ \rightarrow abaaa$
+8. $ccaaa \rightarrow abaaa$
 9. $cabaaa \rightarrow aaaaaa$
