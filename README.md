@@ -1,3 +1,5 @@
+Козинец Дмитрий ИУ9-51
+
 # Анализ системы переписывания строк
 
 ## Система правил
@@ -5,7 +7,7 @@
 Система переписывания строк $R$ определяется следующим набором правил:
 
 $$
-R = \left\\{ 
+T = \left\\{ 
 \begin{array}{ll}
 abca & \rightarrow aaaa,\\\\
 bcab & \rightarrow bbbb,\\\\
@@ -98,6 +100,18 @@ $f_3$: сумма позиций b
 
    $abccc \rightarrow abaaa$
 
-   Добавляем ccaaa$ \rightarrow abaaa$
+   Добавляем $ccaaa$ \rightarrow abaaa$
 
 Можно продолжать этот процесс дальше, но правила будут некрасивыми и система будет только возрастать.
+
+Конечная система T' имеет вид:
+
+1. $bcab \rightarrow bbbb$
+2. $abc \rightarrow aaa$
+3. $aabbcc \rightarrow abcabc$
+4. $bbb \rightarrow aaa$
+5. $ccc \rightarrow aaa$
+6. $aaab \rightarrow baaa$
+7. $aaac \rightarrow caaa$
+8. $ccaaa$ \rightarrow abaaa$
+9. $cabaaa \rightarrow aaaaaa$
