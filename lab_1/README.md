@@ -110,9 +110,9 @@ $f_3$: сумма позиций b
 
 Конечная система T' имеет вид:
 
-1. $bcab \rightarrow bbbb$
+1. $bcab \rightarrow baaa$
 2. $abc \rightarrow aaa$
-3. $aabbcc \rightarrow abcabc$
+3. $aabbcc \rightarrow aaaaaa$
 4. $bbb \rightarrow aaa$
 5. $ccc \rightarrow aaa$
 6. $aaab \rightarrow baaa$
