@@ -118,4 +118,5 @@ $f_3$: сумма позиций b
 6. $aaab \rightarrow baaa$
 7. $aaac \rightarrow caaa$
 8. $ccaaa \rightarrow abaaa$
-9. $cabaaa \rightarrow aaaaaa$
+9. $bcaaa \rightarrow aaaaa$
+10. $cabaaa \rightarrow aaaaaa$
