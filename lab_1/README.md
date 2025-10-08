@@ -28,19 +28,19 @@ $f_2$: сумма позиций с
 
 $f_3$: сумма позиций b
 
-Тогда по f1 убывают все правила кроме последнего, а последнее правило убывает по f2
+Тогда по f1 убывают все правила кроме последнего, а последнее правило убывает по f2 + f3 
 
-Поэтому в приоритете смотрим на f1, потом на f2, а f3 нужно будет для построения новой системы (для этого делаем такие коэффициенты)
+Поэтому в приоритете смотрим на f1, потом на f2 + f3
 
-Итоговый порядок: $2^{\text{len}(w)} \cdot f_1 + f_2 + \left(\frac{1}{2}\right)^{f_3}$
+Итоговый порядок: $2^{\text{len}(w)} \cdot f_1 + f_2 + 1/2^{\text{len}(w)} \cdot f_3$
 
 Выбранный порядок гарантирует убывание правой части относительно левой, следовательно, система завершима
 
 ## 2) Классы эквивалентности
 
-Любая строка после переписываний преобразуется к виду $x^{k_1} \dots y^{k_n} \dots$
+Любая строка после переписываний преобразуется к виду $x^{k_1} \dots y^{k_n} \dots z^{k_m} \dots$
 
-Здесь на месте букв $x, y = \{a, b, c\}$ - любая из букв
+Здесь на месте букв $x, y, z = \{a, b, c\}$ - любая из букв
 
 Правила не меняют длины строк, поэтому имеем бесконечное число классов эквивалентности
 
@@ -104,18 +104,31 @@ $f_3$: сумма позиций b
 
    $abccc \rightarrow abaaa$
 
-   Добавляем $ccaaa$ \rightarrow abaaa$
+   Добавляем $ccaaa \rightarrow abaaa$
 
+5. $aabbccc \rightarrow caaaaaa$
+   
+   $aabbccc \rightarrow aabbaaa$
+
+   Добавляем $caaaaaa \rightarrow aabbaaa$
+   
 Можно продолжать этот процесс дальше, но правила будут некрасивыми и система будет только возрастать.
 
 Конечная система T' имеет вид:
 
-1. $bcab \rightarrow bbbb$
+1. $bcab \rightarrow baaa$
 2. $abc \rightarrow aaa$
-3. $aabbcc \rightarrow abcabc$
+3. $aabbcc \rightarrow aaaaaa$
 4. $bbb \rightarrow aaa$
 5. $ccc \rightarrow aaa$
 6. $aaab \rightarrow baaa$
 7. $aaac \rightarrow caaa$
-8. $ccaaa$ \rightarrow abaaa$
-9. $cabaaa \rightarrow aaaaaa$
+8. $ccaaa \rightarrow abaaa$
+9. $bcaaa \rightarrow aaaaa$
+10. $cabaaa \rightarrow aaaaaa$
+11. $caaaaaa \rightarrow aabbaaa$
+
+## 5) Инварианты
+
+1. Длина слова не меняется ни в каком правиле
+2. Количество разных букв не увеличивается или уменьшается
