@@ -127,3 +127,8 @@ $f_3$: сумма позиций b
 9. $bcaaa \rightarrow aaaaa$
 10. $cabaaa \rightarrow aaaaaa$
 11. $caaaaaa \rightarrow aabbaaa$
+
+## 5) Инварианты
+
+1. Длина слова не меняется ни в каком правиле
+2. Количество разных букв не увеличивается или уменьшается
