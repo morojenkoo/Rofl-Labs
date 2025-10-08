@@ -107,7 +107,11 @@ $f_3$: сумма позиций b
    Добавляем $ccaaa \rightarrow abaaa$
 
 5. $aabbccc \rightarrow caaaaaa$
+   
+   $aabbccc \rightarrow aabbaaa$
 
+   Добавляем $caaaaaa \rightarrow aabbaaa$
+   
 Можно продолжать этот процесс дальше, но правила будут некрасивыми и система будет только возрастать.
 
 Конечная система T' имеет вид:
