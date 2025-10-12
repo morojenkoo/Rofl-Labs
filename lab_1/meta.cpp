@@ -52,16 +52,28 @@ string generateRandomString(int n)
 
 //до 10 случайных переписываний в системе new_Т
 //получаем w->w1
+//переделал с переписыванием рандомного вхождения, как и просили
 string rewrite(string w)
 {
+    static random_device rd;
+    static mt19937 gen(rd());
     const int max_steps = 10;
     int steps = 0;
     while (steps < max_steps)
     {
         int num = getRandomRule();
-        size_t index = w.find(new_T[num].first);
-        if (index != string::npos)
-            w.replace(index, new_T[num].first.length(), new_T[num].second);
+        vector<size_t> positions;
+        
+        //ищем все вхождения правила в w
+        for (size_t pos = w.find(new_T[num].first); pos != string::npos; pos = w.find(new_T[num].first, pos + 1))
+        {
+            positions.push_back(pos);
+        }
+        if (!positions.empty())
+        {
+            uniform_int_distribution<size_t> dist(0, positions.size() - 1);
+            w.replace(positions[dist(gen)], new_T[num].first.length(), new_T[num].second);
+        }
         steps++;
     }
     return w;
